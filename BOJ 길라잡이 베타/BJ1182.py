@@ -1,35 +1,35 @@
-# """
-# 1. 아이디어
-# - combinations를 활용하여 부분수열 구하기
-# - 부분수열의 합과 S를 비교하여 개수 카운트
+"""
+1. 아이디어
+- combinations를 활용하여 부분수열 구하기
+- 부분수열의 합과 S를 비교하여 개수 카운트
 
-# 2. 시간복잡도
-# - 입력: O(N)
-# - 길이 1~N 모든 조합 개수: 2^N-1
-# - 각 조합에 대해 합 계산: O(N)
-# - 전체: O(N * 2^N) -> 2 * 1e7 --> 가능
+2. 시간복잡도
+- 입력: O(N)
+- 길이 1~N 모든 조합 개수: 2^N-1
+- 각 조합에 대해 합 계산: O(N)
+- 전체: O(N * 2^N) -> 2 * 1e7 --> 가능
 
-# 3. 변수
-# - N: int, N개의 정수
-# - S: int, 목표 합
-# - count: int, 합이 S가 되는 부분수열의 개수
-# - nums: list[int], 정수 저장
-# """
+3. 변수
+- N: int, N개의 정수
+- S: int, 목표 합
+- count: int, 합이 S가 되는 부분수열의 개수
+- nums: list[int], 정수 저장
+"""
 
-# import sys
-# from itertools import combinations
+import sys
+from itertools import combinations
 
-# input = sys.stdin.readline
-# N, S = map(int, input().split())
+input = sys.stdin.readline
+N, S = map(int, input().split())
 
-# nums = list(map(int, input().split()))
-# count = 0
+nums = list(map(int, input().split()))
+count = 0
 
-# for i in range(1, N+1):
-#     for combi in combinations(nums, i):
-#         if sum(combi) == S:
-#             count += 1
-# print(count)
+for i in range(1, N+1):
+    for combi in combinations(nums, i):
+        if sum(combi) == S:
+            count += 1
+print(count)
 
 
 """
