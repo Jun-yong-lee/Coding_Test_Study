@@ -7,12 +7,19 @@ def gcd(a, b):
         if a % i == b % i == 0:
             value = i
     return value
+
+def gcd_u(a, b):
+    while True:
+        if b == 0:
+            break
+        a, b = b, a % b
+    return a
     
 
 N = int(input())
 for _ in range(N):
     a, b = map(int, input().split())
-    gcd_value = gcd(a, b)
+    gcd_value = gcd_u(a, b)
     lcm_value = (a * b) // gcd_value
     print(lcm_value)
 
