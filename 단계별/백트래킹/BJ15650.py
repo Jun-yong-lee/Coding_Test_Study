@@ -1,0 +1,22 @@
+import sys
+input = sys.stdin.readline
+
+N, M = map(int, input().split())
+
+seq = []
+
+def backtracking(start):
+    if len(seq) == M:
+        print(" ".join(map(str, seq)))
+        return
+
+    for i in range(start, N+1):
+        if i not in seq:
+            seq.append(i)
+            backtracking(i)
+            seq.pop()
+
+backtracking(1)
+
+
+# 4 4
