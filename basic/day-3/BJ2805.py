@@ -1,3 +1,4 @@
+# 원하는 숫자를 이진 탐색으로 찾기, 매개변수 탐색 & Pypy3 제출 필요 
 import sys
 
 input = sys.stdin.readline
@@ -5,7 +6,7 @@ input = sys.stdin.readline
 N, M = map(int, input().split())
 trees = list(map(int, input().split()))
 
-# 원하는 숫자를 이진 탐색으로 찾기, 매개변수 탐색
+
 
 start = 0
 end = max(trees)
